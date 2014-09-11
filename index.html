@@ -1,67 +1,164 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset='utf-8'>
-	<title>A test for github</title>
-	<meta name="description" content="A test for github">
-	<meta name="author" content="">
-	<meta name="generator" content="slidify" />
-	
-	<!-- LOAD STYLE SHEETS -->
-	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
-	<link rel="stylesheet" href="libraries/highlighters/prettify/css/tomorrow.css" />    
+  <title>The UFOs Application</title>
+  <meta charset="utf-8">
+  <meta name="description" content="The UFOs Application">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/prettify/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
 </head>
-<body style='display: none'>
-	<section class='slides layout-regular template-regular'>
-     <article class="" id="slide-1" style="background:;">
-  <h3>An Introduction</h3>
-  <ol>
-<li>Just trying it out</li>
-<li>Trying to remember my Markdown</li>
-<li>It&#39;s been so long!</li>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>The UFOs Application</h1>
+    <h2>An Examination of Sightings in the US and Canada</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="http://www.nuforc.org/index.html">The National UFO Reporting Center</a> maintains an online database for reporting UFO sightings in the US and Canada.  Users enter the date of observation, location, shape of the UFO, duration of the sighting, and any additional comments that they may deem relevant.  Reports stretch back to the year 0200, but this app only uses the last ten years of data. </p>
+
+<p>Users can examine the data grouped by region of the United States or Canada, look for any trends in reported shape, and look at whether or not there is a statistically significant increase in sightings over the past 10 years.</p>
+
+<p>The app can be found <a href="https://ezcode123.shinyapps.io/UFOs/">here</a>.</p>
+
+<p><img class=center src="assets/fig/twoufos.png" height='200' width='200'/></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Initial Graphs</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>When entering the app, the user will find two initial graphs:</p>
+
+<p><img src="figure/graphs.png" alt="plot of chunk graphs"> </p>
+
+<p>The graph to the left can be used to select the region and shape of most interest.  The graph to the right shows that the number of UFO sightings has increased over the past 10 years.  The p-value of 0.0067 indicates that the observed increase is statistically significant.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>User Inputs</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>There are two pulldown menus that will allow downselection of the data:</p>
+
+<ol>
+<li>Region: 
+
+<ul>
+<li>Northeast, Midwest, South, West, and Canada.<br></li>
+<li>This can also be left to the default of &quot;All&quot;.</li>
+</ul></li>
+<li>UFO Shape:
+
+<ul>
+<li>Sphere, Unknown, Egg, Light, Circle, Chevron, Changing, Cylinder, Disk, Triangle, Rectangle, Diamond, Formation, Oval, Teardrop, Cigar, Other, Flash, Fireball, Cone, Cross</li>
+<li>This can also be left to the default of &quot;All&quot;.</li>
+</ul></li>
 </ol>
 
-</article>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<article class="class" id="id" style="background:;">
-  <h3>A Pretty Graph</h3>
-  <p>Using all those graphing skills:</p>
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Output</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>If a Region is selected, the first graph will change to a simple barchart of that region&#39;s sightings by shape.</li>
+<li>The scatterplot of reports over time will be updated in either Region or Shape is selected.  The data in the graph is limited to that Region/Shape and a new slope and p-value is reported.  This can be used to look for any increases or decreases in shape reporting over time, or for any regional differences.</li>
+</ol>
 
-<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-</article>
-
-<article class="" id="slide-3" style="background:;">
-  <h3>Slide 3</h3>
-  <p>This is the third slide.</p>
-
-</article>
-
-<article class="" id="slide-4" style="background:;">
-  <h3>Slide 4</h3>
-  <p>This is the fourth slide.</p>
-
-</article>
-
-<article class="" id="slide-5" style="background:;">
-  <h3>Slide 5</h3>
-  <p>This is the fifth slide.</p>
-
-</article>
-
-  </section>
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Initial Graphs'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='User Inputs'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Output'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
 </body>
-  <!-- LOAD JAVASCRIPTS  -->
-	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
-	<!-- Google Prettify -->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
-	<script src='libraries/highlighters/prettify/js/lang-r.js'></script>
-	<script>
-	  var pres = document.getElementsByTagName("pre");
-	  for (var i=0; i < pres.length; ++i) {
-	    pres[i].className = "prettyprint linenums";
-	  }
-	  prettyPrint();
-	</script>
-	<!-- End Google Prettify --> 
-	</html>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- Google Prettify -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+  <script src='libraries/highlighters/prettify/js/lang-r.js'></script>
+  <script>
+    var pres = document.getElementsByTagName("pre");
+    for (var i=0; i < pres.length; ++i) {
+      pres[i].className = "prettyprint linenums";
+    }
+    prettyPrint();
+  </script>
+  <!-- End Google Prettify --> 
+  </html>
