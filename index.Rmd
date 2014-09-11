@@ -1,0 +1,53 @@
+---
+title       : A test for github
+subtitle    : 
+author      : 
+job         : 
+framework   : html5slides        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : prettify  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## An Introduction
+
+1. Just trying it out
+2. Trying to remember my Markdown
+3. It's been so long!
+
+--- .class #id 
+
+## A Pretty Graph
+
+Using all those graphing skills:
+
+```{r, echo=FALSE, fig.height=4, fig.width=6}
+
+library(ggplot2)
+data(mtcars)
+h <- ggplot(data=mtcars, aes(x=cyl, y=mpg))
+h <- h + geom_point(aes(colour=factor(gear), shape=factor(gear)), size=3.5)
+h <- h + theme_bw()
+h <- h + xlab(label="No. Cylinders") + ylab(label="Miles per Gallon")
+plot(h)
+```
+
+---
+
+## Slide 3
+
+This is the third slide.
+
+---
+
+## Slide 4
+
+This is the fourth slide.
+
+---
+
+## Slide 5
+
+This is the fifth slide.
